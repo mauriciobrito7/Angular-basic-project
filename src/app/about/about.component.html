@@ -1,0 +1,10 @@
+<button (click)="byEmail = true">By email</button>
+<button (click)="byEmail = false" >By social</button>
+
+<div *ngIf="byEmail; then thenTemplate; else elseTemplate"></div>
+<ng-template #thenTemplate>
+  mauricio_brito@hotmail.es
+</ng-template>
+<ng-template #elseTemplate>
+  @Mauriciobritoo
+</ng-template>
